@@ -46,3 +46,8 @@
     flex-direction: column;
     justify-content: center;
   }
+
+  .customButt{
+    width: 185px;
+    align-self: center;
+  }

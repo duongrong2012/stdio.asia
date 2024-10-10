@@ -10,3 +10,14 @@ export const formatCurrency = (text = '') => {
       reader.onerror = error => reject(error);
     });
   }
+
+  export async function createFile(url) {
+    let response = await fetch(url);
+    let data = await response.blob();
+    let metadata = {
+      type: 'image/jpeg'
+    };
+    let file = new File([data], `${Date.now()}.jpg`, metadata);
+    return file
+    // ... do something with the file or return it
+  }
